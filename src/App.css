@@ -77,7 +77,11 @@ a {
     grid-area: content;
     padding: 2%;
     overflow: auto;
-    background-color: lightslategray;
+    background-image: url("../public/imgs/background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    margin-top: 2vw;
 }
 .image {
     background-image: url("../public/imgs/hero.svg");
