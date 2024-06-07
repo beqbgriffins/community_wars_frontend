@@ -1,38 +1,81 @@
-.App {
-  text-align: center;
+.body {
+    margin: 0;
+    height: 100vh;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: 15vw 1fr;
+    grid-template-areas:
+        "header header"
+        "navbar content"
+        "footer footer";
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.header {
+    grid-area: header;
+    top: 0;
+    position: fixed;
+    padding: .1%;
+    text-align: center;
+    background: #00008B;
+    color: white;
+    width: 100%;
+}
+.login {
+    float: right;
+    text-align: center;
+    background: #00008B;
+    color: white;
+    font-size: 1vw;
+    padding-right: 1vw;
+}
+.header_title {
+    text-align: center;
+    font-weight: bold;
+    font-size: 1vw;
+    letter-spacing: 5px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.navbar{
+    float: left;
+    grid-area: navbar;
+    text-align: center;
+    background: #00008B;
+    color: white;
+    margin: 0;
+    padding: 0;
+    width: 15vw;
+    height: 100%;
+    position: fixed;
+    overflow: auto;
+
+    li {
+        list-style-type: none;
+        padding: 1vw;
+        font-size: 1vw;
+        border-bottom: 1px solid white;
+    }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.footer {
+    grid-area: footer;
+    text-align: center;
+    padding: .1%;
+    background-color: #00008B;
+    color: white;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+.float-bottom {position: fixed; bottom: 0;}
+a {
+    letter-spacing: 2px;
+    padding-left: 5px;
+    color: white;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.content {
+    grid-area: content;
+    padding: 1%;
+    overflow: auto;
+    background-color: lightslategray;
 }
